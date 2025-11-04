@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete HTML learning reference">
+    <title>HTML Learning Guide - Beginner to Advanced</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        section { margin-bottom: 30px; border: 1px solid #ddd; padding: 15px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; }
+        code { background: #f4f4f4; padding: 2px 5px; }
+        .example { background: #e8f4f8; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <!-- BASIC STRUCTURE -->
+    <header>
+        <h1>Complete HTML Learning Guide</h1>
+        <nav>
+            <a href="#basics">Basics</a> | 
+            <a href="#text">Text</a> | 
+            <a href="#lists">Lists</a> | 
+            <a href="#tables">Tables</a> | 
+            <a href="#forms">Forms</a> | 
+            <a href="#media">Media</a> | 
+            <a href="#semantic">Semantic</a> | 
+            <a href="#advanced">Advanced</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECTION 1: BASIC TAGS -->
+        <section id="basics">
+            <h2>1. Basic Tags</h2>
+            <div class="example">
+                <p><strong>&lt;p&gt;</strong> - Paragraph tag for text blocks</p>
+                <p><strong>&lt;br&gt;</strong> - Line break<br>Next line here</p>
+                <p><strong>&lt;hr&gt;</strong> - Horizontal rule</p>
+                <hr>
+                <p><strong>&lt;div&gt;</strong> - Division/container (block)</p>
+                <div>This is a div container</div>
+                <p><strong>&lt;span&gt;</strong> - Inline container: <span style="color: blue;">colored text</span></p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TEXT FORMATTING -->
+        <section id="text">
+            <h2>2. Text Formatting Tags</h2>
+            <div class="example">
+                <p><strong>&lt;h1&gt; to &lt;h6&gt;</strong> - Headings</p>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+
+                <p><strong>&lt;strong&gt;</strong> - <strong>Important text (bold)</strong></p>
+                <p><strong>&lt;b&gt;</strong> - <b>Bold text (no semantic meaning)</b></p>
+                <p><strong>&lt;em&gt;</strong> - <em>Emphasized text (italic)</em></p>
+                <p><strong>&lt;i&gt;</strong> - <i>Italic text</i></p>
+                <p><strong>&lt;mark&gt;</strong> - <mark>Highlighted text</mark></p>
+                <p><strong>&lt;small&gt;</strong> - <small>Smaller text</small></p>
+                <p><strong>&lt;del&gt;</strong> - <del>Deleted text</del></p>
+                <p><strong>&lt;ins&gt;</strong> - <ins>Inserted text</ins></p>
+                <p><strong>&lt;sub&gt;</strong> - H<sub>2</sub>O (subscript)</p>
+                <p><strong>&lt;sup&gt;</strong> - X<sup>2</sup> (superscript)</p>
+                <p><strong>&lt;code&gt;</strong> - <code>console.log("Hello")</code></p>
+                <p><strong>&lt;pre&gt;</strong> - Preformatted text</p>
+                <pre>
+    Line 1
+        Indented Line 2
+            More indent
+                </pre>
+                <p><strong>&lt;blockquote&gt;</strong> - Block quote</p>
+                <blockquote cite="https://example.com">
+                    This is a quotation from somewhere.
+                </blockquote>
+                <p><strong>&lt;q&gt;</strong> - Inline quote: <q>Short quote here</q></p>
+                <p><strong>&lt;abbr&gt;</strong> - <abbr title="HyperText Markup Language">HTML</abbr></p>
+                <p><strong>&lt;cite&gt;</strong> - <cite>The Great Gatsby</cite></p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: LISTS -->
+        <section id="lists">
+            <h2>3. List Tags</h2>
+            <div class="example">
+                <p><strong>&lt;ul&gt;</strong> - Unordered List</p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+
+                <p><strong>&lt;ol&gt;</strong> - Ordered List</p>
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ol>
+
+                <p><strong>&lt;ol type&gt;</strong> - Ordered List with types</p>
+                <ol type="A">
+                    <li>Type A</li>
+                </ol>
+                <ol type="a">
+                    <li>Type a</li>
+                </ol>
+                <ol type="I">
+                    <li>Type I</li>
+                </ol>
+
+                <p><strong>&lt;dl&gt;</strong> - Description List</p>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>HyperText Markup Language</dd>
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- SECTION 4: LINKS AND IMAGES -->
+        <section id="media">
+            <h2>4. Links, Images, and Media</h2>
+            <div class="example">
+                <p><strong>&lt;a&gt;</strong> - Anchor/Link</p>
+                <a href="https://www.google.com">External Link</a><br>
+                <a href="#basics">Internal Link</a><br>
+                <a href="mailto:email@example.com">Email Link</a><br>
+                <a href="tel:+1234567890">Phone Link</a><br>
+                <a href="https://example.com" target="_blank">Open in new tab</a><br>
+
+                <p><strong>&lt;img&gt;</strong> - Image</p>
+                <img src="https://via.placeholder.com/150" alt="Placeholder image" width="150" height="150">
+
+                <p><strong>&lt;figure&gt; &amp; &lt;figcaption&gt;</strong></p>
+                <figure>
+                    <img src="https://via.placeholder.com/200" alt="Demo">
+                    <figcaption>Image caption here</figcaption>
+                </figure>
+
+                <p><strong>&lt;audio&gt;</strong> - Audio player</p>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                    Your browser does not support audio.
+                </audio>
+
+                <p><strong>&lt;video&gt;</strong> - Video player</p>
+                <video width="320" height="240" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+
+                <p><strong>&lt;iframe&gt;</strong> - Embedded content</p>
+                <iframe src="https://www.example.com" width="300" height="200" title="Example"></iframe>
+
+                <p><strong>&lt;embed&gt;</strong> - Embedded plugin content</p>
+                <embed src="file.pdf" width="300" height="200" type="application/pdf">
+
+                <p><strong>&lt;picture&gt;</strong> - Responsive images</p>
+                <picture>
+                    <source media="(min-width: 650px)" srcset="https://via.placeholder.com/400">
+                    <source media="(min-width: 465px)" srcset="https://via.placeholder.com/300">
+                    <img src="https://via.placeholder.com/200" alt="Responsive">
+                </picture>
+            </div>
+        </section>
+
+        <!-- SECTION 5: TABLES -->
+        <section id="tables">
+            <h2>5. Table Tags</h2>
+            <div class="example">
+                <p><strong>Basic Table</strong></p>
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <caption>Student Grades</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>20</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Jane</td>
+                            <td>22</td>
+                            <td>B</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Average</td>
+                            <td>A-</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <p><strong>Table with rowspan and colspan</strong></p>
+                <table border="1" cellpadding="5">
+                    <tr>
+                        <th rowspan="2">Name</th>
+                        <th colspan="2">Marks</th>
+                    </tr>
+                    <tr>
+                        <th>Math</th>
+                        <th>Science</th>
+                    </tr>
+                    <tr>
+                        <td>Alice</td>
+                        <td>90</td>
+                        <td>85</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FORMS -->
+        <section id="forms">
+            <h2>6. Form Tags</h2>
+            <div class="example">
+                <form action="/submit" method="post">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter name" required><br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password"><br><br>
+
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob"><br><br>
+
+                        <label for="color">Favorite Color:</label>
+                        <input type="color" id="color" name="color"><br><br>
+
+                        <label for="range">Rating:</label>
+                        <input type="range" id="range" name="range" min="0" max="10"><br><br>
+
+                        <label for="file">Upload File:</label>
+                        <input type="file" id="file" name="file"><br><br>
+
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br><br>
+
+                        <label>Hobbies:</label>
+                        <input type="checkbox" id="reading" name="hobbies" value="reading">
+                        <label for="reading">Reading</label>
+                        <input type="checkbox" id="sports" name="hobbies" value="sports">
+                        <label for="sports">Sports</label><br><br>
+
+                        <label for="country">Country:</label>
+                        <select id="country" name="country">
+                            <option value="">Select a country</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">UK</option>
+                            <option value="canada">Canada</option>
+                        </select><br><br>
+
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message"></textarea><br><br>
+
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                        <input type="button" value="Click Me">
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECTION 7: SEMANTIC HTML -->
+        <section id="semantic">
+            <h2>7. Semantic HTML5 Tags</h2>
+            <div class="example">
+                <p><strong>&lt;header&gt;</strong> - Page or section header</p>
+                <p><strong>&lt;nav&gt;</strong> - Navigation links</p>
+                <p><strong>&lt;main&gt;</strong> - Main content</p>
+                <p><strong>&lt;article&gt;</strong> - Self-contained content</p>
+                <article>
+                    <h3>Article Title</h3>
+                    <p>This is an article about something interesting.</p>
+                </article>
+                <p><strong>&lt;section&gt;</strong> - Thematic grouping of content</p>
+                <p><strong>&lt;aside&gt;</strong> - Sidebar content</p>
+                <aside>
+                    <p>Related information or ads go here.</p>
+                </aside>
+                <p><strong>&lt;footer&gt;</strong> - Page or section footer</p>
+                <p><strong>&lt;time&gt;</strong> - <time datetime="2024-01-01">January 1, 2024</time></p>
+                <p><strong>&lt;details&gt; &amp; &lt;summary&gt;</strong></p>
+                <details>
+                    <summary>Click to expand</summary>
+                    <p>Hidden content revealed when clicked.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- SECTION 8: ADVANCED TAGS -->
+        <section id="advanced">
+            <h2>8. Advanced HTML Tags</h2>
+            <div class="example">
+                <p><strong>&lt;progress&gt;</strong> - Progress bar</p>
+                <progress value="70" max="100">70%</progress><br><br>
+
+                <p><strong>&lt;meter&gt;</strong> - Scalar measurement</p>
+                <meter value="6" min="0" max="10">6 out of 10</meter><br><br>
+
+                <p><strong>&lt;canvas&gt;</strong> - Drawing graphics</p>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas><br><br>
+
+                <p><strong>&lt;svg&gt;</strong> - Scalable Vector Graphics</p>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg><br><br>
+
+                <p><strong>&lt;datalist&gt;</strong> - Input options</p>
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Safari">
+                    <option value="Edge">
+                </datalist><br><br>
+
+                <p><strong>&lt;output&gt;</strong> - Calculation result</p>
+                <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="number" id="a" value="0"> +
+                    <input type="number" id="b" value="0"> =
+                    <output name="result" for="a b">0</output>
+                </form><br>
+
+                <p><strong>&lt;template&gt;</strong> - Hidden template content</p>
+                <template id="myTemplate">
+                    <p>This is template content, not rendered by default.</p>
+                </template>
+
+                <p><strong>&lt;map&gt; &amp; &lt;area&gt;</strong> - Image map</p>
+                <img src="https://via.placeholder.com/300x200" alt="Workspace" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="rect" coords="0,0,150,200" alt="Left" href="#">
+                    <area shape="rect" coords="150,0,300,200" alt="Right" href="#">
+                </map>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2024 HTML Learning Guide. For educational purposes.</p>
+        <address>
+            Contact: <a href="mailto:learn@example.com">learn@example.com</a>
+        </address>
+    </footer>
+
+</body>
+</html>
+                    <tr>
+                        <td>Alice</td>
+                        <td>90</td>
+                        <td>85</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FORMS -->
+        <section id="forms">
+            <h2>6. Form Tags</h2>
+            <div class="example">
+                <form action="/submit" method="post">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <!-- TEXT INPUT - Basic single-line text -->
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter name" required><br><br>
+
+                        <!-- EMAIL INPUT - Validates email format -->
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+
+                        <!-- PASSWORD INPUT - Hides typed characters -->
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" minlength="8"><br><br>
+
+                        <!-- NUMBER INPUT - Only accepts numbers, can set min/max -->
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+                        <!-- DATE INPUT - Date picker -->
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob"><br><br>
+
+                        <!-- TIME INPUT - Time picker -->
+                        <label for="time">Appointment Time:</label>
+                        <input type="time" id="time" name="time"><br><br>
+
+                        <!-- DATETIME-LOCAL - Date and time picker -->
+                        <label for="datetime">Event Date & Time:</label>
+                        <input type="datetime-local" id="datetime" name="datetime"><br><br>
+
+                        <!-- MONTH INPUT - Month and year picker -->
+                        <label for="month">Birth Month:</label>
+                        <input type="month" id="month" name="month"><br><br>
+
+                        <!-- WEEK INPUT - Week picker -->
+                        <label for="week">Select Week:</label>
+                        <input type="week" id="week" name="week"><br><br>
+
+                        <!-- COLOR INPUT - Color picker -->
+                        <label for="color">Favorite Color:</label>
+                        <input type="color" id="color" name="color" value="#3498db"><br><br>
+
+                        <!-- RANGE INPUT - Slider control -->
+                        <label for="range">Rating (0-10):</label>
+                        <input type="range" id="range" name="range" min="0" max="10" value="5" step="1"><br><br>
+
+                        <!-- FILE INPUT - File upload -->
+                        <label for="file">Upload File:</label>
+                        <input type="file" id="file" name="file" accept=".pdf,.doc,.docx"><br><br>
+
+                        <!-- MULTIPLE FILE INPUT - Upload multiple files -->
+                        <label for="files">Upload Multiple Files:</label>
+                        <input type="file" id="files" name="files" multiple><br><br>
+
+                        <!-- URL INPUT - Validates URL format -->
+                        <label for="website">Website:</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+
+                        <!-- TEL INPUT - Phone number (doesn't validate by default) -->
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+
+                        <!-- SEARCH INPUT - Search field with clear button -->
+                        <label for="search">Search:</label>
+                        <input type="search" id="search" name="search" placeholder="Search here..."><br><br>
+
+                        <!-- RADIO BUTTONS - Select one option from group -->
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label><br><br>
+
+                        <!-- CHECKBOXES - Select multiple options -->
+                        <label>Hobbies:</label>
+                        <input type="checkbox" id="reading" name="hobbies" value="reading">
+                        <label for="reading">Reading</label>
+                        <input type="checkbox" id="sports" name="hobbies" value="sports">
+                        <label for="sports">Sports</label>
+                        <input type="checkbox" id="music" name="hobbies" value="music">
+                        <label for="music">Music</label><br><br>
+
+                        <!-- SELECT DROPDOWN - Single selection dropdown -->
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="">-- Select a country --</option>
+                            <option value="usa">USA</option>
+                            <option value="uk">UK</option>
+                            <option value="canada">Canada</option>
+                            <option value="australia">Australia</option>
+                        </select><br><br>
+
+                        <!-- MULTIPLE SELECT - Select multiple options with Ctrl/Cmd -->
+                        <label for="languages">Programming Languages (hold Ctrl/Cmd):</label>
+                        <select id="languages" name="languages" multiple size="4">
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                        </select><br><br>
+
+                        <!-- OPTGROUP - Group options in dropdown -->
+                        <label for="cars">Select Car:</label>
+                        <select id="cars" name="cars">
+                            <optgroup label="German Cars">
+                                <option value="mercedes">Mercedes</option>
+                                <option value="bmw">BMW</option>
+                            </optgroup>
+                            <optgroup label="Japanese Cars">
+                                <option value="toyota">Toyota</option>
+                                <option value="honda">Honda</option>
+                            </optgroup>
+                        </select><br><br>
+
+                        <!-- TEXTAREA - Multi-line text input -->
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message here..." maxlength="500"></textarea><br><br>
+
+                        <!-- HIDDEN INPUT - Not visible but submits data -->
+                        <input type="hidden" name="userId" value="12345">
+
+                        <!-- SUBMIT BUTTON - Submits the form -->
+                        <button type="submit">Submit Form</button>
+
+                        <!-- RESET BUTTON - Clears all form fields -->
+                        <button type="reset">Reset Form</button>
+
+                        <!-- BUTTON - Generic button (no default action) -->
+                        <input type="button" value="Click Me" onclick="alert('Button clicked!')">
+
+                        <!-- IMAGE BUTTON - Submit with image -->
+                        <input type="image" src="https://via.placeholder.com/100x30" alt="Submit" width="100" height="30">
+                    </fieldset>
