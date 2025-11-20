@@ -1,0 +1,102 @@
+<!-- 02_admission.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>University Admission Form</title>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Istiak Ahmed" />
+  </head>
+
+  <body>
+    <h1>AIUB Admission Form</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name:</label><br />
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          required
+          maxlength="100"
+        /><br /><br />
+
+        <label for="fathername">Father's Name:</label><br />
+        <input
+          type="text"
+          id="fathername"
+          name="fathername"
+          maxlength="100"
+        /><br /><br />
+
+        <label for="phone">Phone:</label><br />
+        <input type="text" id="phone" name="phone" maxlength="15" /><br /><br />
+
+        <label>Gender:</label><br />
+        <input type="radio" id="male" name="gender" value="male" required />
+        Male
+        <input type="radio" id="female" name="gender" value="female" /> Female
+        <input type="radio" id="other" name="gender" value="other" />
+        Other<br /><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          maxlength="100"
+        /><br /><br />
+
+        <label for="dob">Date of Birth:</label><br />
+        <input type="date" id="dob" name="dob" required /><br /><br />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Academic Information</legend>
+
+        <label for="hsc">HSC Result (GPA):</label><br />
+        <input
+          type="text"
+          id="hsc"
+          name="hsc"
+          required
+          maxlength="4"
+        /><br /><br />
+
+        <label for="department">Preferred Department:</label><br />
+        <select id="department" name="department" required>
+          <option value="">Select</option>
+          <option value="cse">CSE</option>
+          <option value="eee">EEE</option>
+          <option value="bba">BBA</option>
+          <option value="ce">CE</option>
+          <option value="law">Law</option></select
+        ><br /><br />
+
+        <label for="interest">Interests (choose any):</label><br />
+        <input type="checkbox" name="interest" value="web" /> Web Development
+        <input type="checkbox" name="interest" value="ml" /> Machine Learning
+        <input type="checkbox" name="interest" value="ds" /> Data Science
+        <input type="checkbox" name="interest" value="ai" /> Artificial
+        Intelligence <input type="checkbox" name="interest" value="iot" /> IoT
+        <input type="checkbox" name="interest" value="cyber" />
+        Cybersecurity<br /><br />
+
+        <label for="document">Upload Transcript:</label><br />
+        <input type="file" id="document" name="document" required /><br /><br />
+      </fieldset>
+
+      <br />
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>

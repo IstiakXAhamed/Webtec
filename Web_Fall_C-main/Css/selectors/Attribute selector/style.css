@@ -2,3 +2,6 @@ input[type="text"]
 {
     background-color: red;
 }
+input[type] {
+  border: 3px solid black;
+}

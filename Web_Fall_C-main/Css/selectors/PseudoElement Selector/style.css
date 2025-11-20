@@ -13,3 +13,9 @@ li:nth-child(even)
 {
     background-color:rosybrown;
 }
+h1::before {
+  content: "🔥 ";
+}
+h1::after {
+  content: " ✨";
+}
