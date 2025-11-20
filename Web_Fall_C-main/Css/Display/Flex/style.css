@@ -1,0 +1,29 @@
+#div1
+{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    border:3px solid red;
+    background-color: green;
+    
+    justify-content:space-evenly;
+    align-items: center;
+    
+    flex-direction: column;
+    
+
+}
+
+button{
+    width: 30px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
