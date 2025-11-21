@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overflow Handling Box</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Overflow Handling Demo</h1>
+
+    <div class="box visible-box">
+      <h2>overflow: visible</h2>
+      <p>
+        This is a long block of text designed to test overflow behavior. It will
+        extend outside the box when the content is larger than the height. This
+        helps demonstrate how the visible overflow mode works. More text is
+        added so that it clearly exceeds the 200px height and you can see the
+        effect.
+      </p>
+    </div>
+
+    <div class="box hidden-box">
+      <h2>overflow: hidden</h2>
+      <p>
+        This long text will demonstrate how overflow hidden clips the extra
+        content. Anything that does not fit inside the 200px box will be cut off
+        cleanly without any scrollbars. This shows how hidden controls the
+        visible content area.
+      </p>
+    </div>
+
+    <div class="box scroll-box">
+      <h2>overflow: scroll</h2>
+      <p>
+        Scroll will always show scrollbars even if content barely exceeds the
+        container. This allows the user to scroll through all hidden text. This
+        paragraph contains enough text to force scrolling and display the
+        scrollbar inside the box for easy testing of overflow behavior.
+      </p>
+    </div>
+
+    <div class="box auto-box">
+      <h2>overflow: auto</h2>
+      <p>
+        Auto only shows scrollbars when needed. If the content fits, no
+        scrollbars appear. Otherwise, scrollbars show automatically. This is the
+        most commonly used mode for handling dynamic text inside a fixed
+        container.
+      </p>
+    </div>
+
+    <footer class="site-footer" role="contentinfo">
+      <p>Web Technologies Lab — Overflow Handling Box</p>
+    </footer>
+    
+  </body>
+</html>

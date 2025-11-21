@@ -1,0 +1,82 @@
+html {
+  background: #f6fff9;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  line-height: 1.55;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 3px solid #d6eedd;
+  padding: 14px 0;
+  min-height: 56px;
+}
+
+.header-inner {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.25em;
+  color: #0b5cff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-nav {
+  display: inline-block;
+  margin-left: 24px;
+  vertical-align: middle;
+}
+
+.main-nav a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 6px 8px;
+  text-decoration: none;
+  color: #0b5cff;
+  font-size: 0.95em;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  text-decoration: underline;
+}
+
+.content {
+  width: 90%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: 56px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+article h2 {
+  margin-top: 0;
+  font-size: 1.6em;
+  color: #0a4f8a;
+}
+
+article p {
+  margin: 14px 0;
+  font-size: 1em;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 18px 0;
+  margin-top: 20px;
+  color: #555;
+}

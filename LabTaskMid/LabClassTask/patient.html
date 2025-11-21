@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>Patient List</title>
+  </head>
+  <body>
+    <a href="CV.html">Home</a>
+    <a href="friends.html">Friends</a>
+    <a href="contact.html">Contact</a>
+
+    <h1>Patient Management System</h1>
+
+    <h2>Add New Patient</h2>
+    <form>
+      <table border="1">
+        <tr>
+          <td>Patient ID:</td>
+          <td><input type="text" name="patientId" /></td>
+        </tr>
+        <tr>
+          <td>Patient Name:</td>
+          <td><input type="text" name="patientName" /></td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td><input type="number" name="age" /></td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <input type="radio" name="gender" value="male" /> Male
+            <input type="radio" name="gender" value="female" /> Female
+          </td>
+        </tr>
+        <tr>
+          <td>Contact:</td>
+          <td><input type="text" name="contact" /></td>
+        </tr>
+        <tr>
+          <td>Address:</td>
+          <td><textarea name="address" rows="3" cols="30"></textarea></td>
+        </tr>
+        <tr>
+          <td>Blood Group:</td>
+          <td>
+            <select name="bloodGroup">
+              <option value="">Select</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="Add Patient" />
+            <input type="reset" value="Clear" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <hr />
+
+    <h2>Patient List</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>Patient ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Contact</th>
+        <th>Blood Group</th>
+        <th>Address</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>P001</td>
+        <td>John Doe</td>
+        <td>35</td>
+        <td>Male</td>
+        <td>123-456-7890</td>
+        <td>A+</td>
+        <td>123 Main St, City</td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>P002</td>
+        <td>Jane Smith</td>
+        <td>28</td>
+        <td>Female</td>
+        <td>098-765-4321</td>
+        <td>O+</td>
+        <td>456 Oak Ave, Town</td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>P003</td>
+        <td>Mike Johnson</td>
+        <td>42</td>
+        <td>Male</td>
+        <td>555-123-4567</td>
+        <td>B+</td>
+        <td>789 Pine Rd, Village</td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-nav {
+  display: block;
+  background: #0b5cff;
+  padding: 10px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.main-nav a {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background: #ffffff;
+  color: #0b5cff;
+  border-radius: 4px;
+}
+
+.main-nav a:focus {
+  outline: 2px solid #ffd54d;
+  outline-offset: 2px;
+}

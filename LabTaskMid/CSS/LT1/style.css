@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: antiquewhite;
+}
+header, footer {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-box {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f7f7ff;
+}
+
+.profile-box img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.info {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.bio {
+    margin-top: 10px;
+    font-size: 0.95em;
+}

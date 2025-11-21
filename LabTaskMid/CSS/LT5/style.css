@@ -1,0 +1,73 @@
+html {
+  background: #e8fff0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 20px 0;
+}
+
+.intro-box,
+.info-box {
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #bfe6d6;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.section-text {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.spacer {
+  height: 1200px;
+}
+
+.contact-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 260px;
+  padding: 16px;
+  border: 1px solid #bfe6d6;
+  background: #e6fff0;
+  box-sizing: border-box;
+  z-index: 9999;
+  text-align: left;
+  font-size: 1em;
+  border-radius: 8px;
+}
+
+.contact-widget a {
+  color: #0b5cff;
+  text-decoration: none;
+}
+
+.contact-widget .cw-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.15em;
+}
+
+.contact-widget .cw-line {
+  margin: 8px 0;
+}
+
+.contact-widget:hover {
+  background: #d6ffdf;
+  border-color: #9ee0b8;
+}

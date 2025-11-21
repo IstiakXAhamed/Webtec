@@ -1,0 +1,50 @@
+html {
+  background: #eefdf4;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  border: 2px solid #0b5cff;
+  padding: 10px;
+  margin: 50px auto;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* overflow: visible — content flows outside the box */
+.visible-box {
+  overflow: visible;
+}
+
+/* overflow: hidden — extra content is clipped */
+.hidden-box {
+  overflow: hidden;
+}
+
+/* overflow: scroll — scrollbars always appear */
+.scroll-box {
+  overflow: scroll;
+}
+
+/* overflow: auto — scrollbars appear only when needed */
+.auto-box {
+  overflow: auto;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 18px 0;
+  margin-top: 20px;
+  color: #555;
+}

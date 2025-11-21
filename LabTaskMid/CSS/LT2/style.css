@@ -1,0 +1,50 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section-box {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+#about-me {
+    background: #fff7e6;   
+}
+
+#education {
+    background: #eaf6ff;   
+}
+
+#hobbies {
+    background: #f2ffe9;   
+}
+
+
+.section-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+
+.section-box p {
+    font-size: 1em;
+    margin: 8px 0;
+}
+
+
+.divider {
+    width: 60%;
+    height: 4px;
+    background: #bbbbbb;
+    border: 0;
+    margin: 20px auto;
+}
