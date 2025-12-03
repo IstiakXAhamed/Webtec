@@ -1,0 +1,13 @@
+function sayMyName() {
+  const name = "Heizenburg";
+    let name2 = 'sanmi'
+    name2 = 'jafar'
+    
+  if (name == "Heizenburg") {
+    let name1 = "meow";
+    name1 = "cat";
+    console.log(name1);
+  }
+}
+
+sayMyName();

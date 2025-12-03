@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Form Field Display</title>
+
+    <style>
+      #roll,
+      #dept {
+        display: none;
+        margin-top: 10px;
+      }
+    </style>
+
+    <script defer>
+      function updateFields() {
+        const userType = document.getElementById("type").value;
+        const roll = document.getElementById("roll");
+        const dept = document.getElementById("dept");
+
+        if (userType === "Student") {
+          roll.style.display = "block";
+          dept.style.display = "none";
+        } else if (userType === "Teacher") {
+          dept.style.display = "block";
+          roll.style.display = "none";
+        } else {
+          roll.style.display = "none";
+          dept.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <select id="type" onchange="updateFields()">
+      <option value="">Select Type</option>
+      <option value="Student">Student</option>
+      <option value="Teacher">Teacher</option>
+    </select>
+
+    <div id="roll">
+      <input type="text" placeholder="Roll Number" />
+    </div>
+
+    <div id="dept">
+      <input type="text" placeholder="Department" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="author" content="Istiak Ahmed" />
+    <meta
+      name="description"
+      content="Portfolio of Istiak Ahmed - 3rd year CSE student at AIUB"
+    />
+    <title>LT9 - Istiak Ahmed</title>
+
+    <link rel="stylesheet" href="LT9.css" />
+    <script defer src="LT9.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <h1>Istiak Ahmed</h1>
+        <div class="subtitle">3rd Year, BSc in CSE — AIUB</div>
+      </div>
+
+      <div class="controls">
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-btn" data-target="about">About</button>
+          <button class="nav-btn" data-target="projects">Projects</button>
+          <button class="nav-btn" data-target="contact">Contact</button>
+        </nav>
+
+        <div class="greet-clock">
+          <div id="greet" class="greet">Hello</div>
+          <div id="clock" class="clock">--:--:--</div>
+        </div>
+
+        <button id="themeBtn" class="theme-btn" type="button">
+          Switch to Dark
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- ABOUT -->
+      <section id="about" class="panel">
+        <h2>About</h2>
+        <p>
+          I am <strong>Istiak Ahmed</strong>, a 3rd year CSE student at AIUB. I
+          build practical projects using Python, ML, and web technologies.
+        </p>
+
+        <div class="card">
+          <h3>Skills</h3>
+          <ul>
+            <li>Python, NumPy, Pandas, scikit-learn</li>
+            <li>JavaScript, HTML, CSS, React (basics)</li>
+            <li>Unity (C#), Git, SQL</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Education</h3>
+          <table class="edu">
+            <thead>
+              <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BSc in CSE</td>
+                <td>AIUB</td>
+                <td>2023–Present</td>
+              </tr>
+              <tr>
+                <td>HSC (Science)</td>
+                <td>Govt. Hazi M. Mohsin College</td>
+                <td>2021</td>
+              </tr>
+              <tr>
+                <td>SSC (Science)</td>
+                <td>HCPSC</td>
+                <td>2019</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="panel hidden">
+        <h2>Projects</h2>
+
+        <div class="projects-grid">
+          <article class="project card">
+            <h3>ML Spam Classifier</h3>
+            <p>
+              TF-IDF + Logistic Regression spam detector. Training script,
+              accuracy report, saved model.
+            </p>
+            <div class="meta">Python · scikit-learn · pandas</div>
+            <a class="link" href="#" target="_blank" rel="noopener">GitHub</a>
+          </article>
+
+          <article class="project card">
+            <h3>Personal Portfolio</h3>
+            <p>
+              Responsive portfolio with theme toggle, contact validation, and
+              project list (this site).
+            </p>
+            <div class="meta">HTML · CSS · JavaScript</div>
+            <a class="link" href="#" target="_blank" rel="noopener">GitHub</a>
+          </article>
+
+          <article class="project card">
+            <h3>Unity Mars Explorer</h3>
+            <p>
+              Small Unity scene with player controls and collectibles for
+              learning terrain & physics.
+            </p>
+            <div class="meta">Unity · C#</div>
+            <a class="link" href="#" target="_blank" rel="noopener">GitHub</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="panel hidden">
+        <h2>Contact</h2>
+
+        <form id="contact-form" class="card form" novalidate>
+          <label for="c-name">Name</label>
+          <input id="c-name" name="name" type="text" required />
+          <div id="err-name" class="error" aria-live="polite"></div>
+
+          <label for="c-email">Email</label>
+          <input id="c-email" name="email" type="email" required />
+          <div id="err-email" class="error" aria-live="polite"></div>
+
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" name="message" rows="5" required></textarea>
+          <div id="err-msg" class="error" aria-live="polite"></div>
+
+          <div class="form-actions">
+            <button id="sendBtn" type="submit">Send</button>
+            <button id="clearBtn" type="reset">Clear</button>
+          </div>
+        </form>
+
+        <div class="card contact-info">
+          <div>
+            <strong>Email:</strong>
+            <a href="mailto:Istiak1728@gmail.com">Mail Me</a>
+          </div>
+          <div>
+            <strong>GitHub:</strong>
+            <a
+              href="https://github.com/IstiakXAhamed"
+              target="_blank"
+              rel="noopener"
+              >Github</a
+            >
+          </div>
+          <div>
+            <strong>LinkedIn:</strong>
+            <a
+              href="https://www.linkedin.com/in/md-istiak-ahamed-68b2672a1/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© 2025 Istiak Ahmed · AIUB</footer>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+function sayMyName()
+{
+    alert("Heizenburg");
+}

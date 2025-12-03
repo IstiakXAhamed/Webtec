@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="2px">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <br />
+
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" />
+    <br />
+    <label for="marks">Marks</label>
+    <input type="number" name="marks" id="mark" />
+    <br />
+    <label for="" id="show"></label>
+    <br />
+    <button id="btn">Submit</button>
+
+    <script>
+      let Name = document.getElementById("name");
+      let Marks = document.getElementById("mark");
+      let showMessage = document.getElementById("show");
+      let Button = document.getElementById("btn");
+      let TableBody = document.getElementById("tbody");
+
+      Button.addEventListener("click", function () {
+        let valueOFName = Name.value.trim();
+        let valueOfMarks = Marks.value.trim();
+
+        if (valueOFName === "" || valueOfMarks === "") {
+          showMessage.innerText = "it cannot contain spaces";
+          return;
+        }
+
+        for (let ch of valueOFName) {
+          // let ch = valueOFName[i];
+
+          if (!(ch >= "A" && ch <= "Z") && !(ch >= "a" && ch <= "z")) {
+            showMessage.innerText = "only contain letter";
+            return;
+          }
+        }
+
+        if (valueOfMarks < 0 || valueOfMarks > 100) {
+          showMessage.innerText = "Number should be between 0 to 100";
+          return;
+        }
+
+        let tableRow = document.createElement("tr");
+        let nameData = document.createElement("td");
+        nameData.innerText = valueOFName;
+        let marksData = document.createElement("td");
+        marksData.innerText = valueOfMarks;
+
+        tableRow.appendChild(nameData);
+        tableRow.appendChild(marksData);
+        TableBody.appendChild(tableRow);
+
+        if (valueOfMarks > 50) {
+          tableRow.style.backgroundColor = "green";
+        } else {
+          tableRow.style.backgroundColor = "red";
+        }
+      });
+    </script>
+  </body>
+</html>

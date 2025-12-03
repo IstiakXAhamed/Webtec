@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Editable Table</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+    </style>
+
+    <script defer>
+      function addStudent() {
+        const name = document.getElementById("name").value.trim();
+        const roll = document.getElementById("roll").value.trim();
+        const dept = document.getElementById("dept").value.trim();
+
+        if (name === "" || roll === "" || dept === "") {
+          alert("All fields are required!");
+          return;
+        }
+
+        const table = document.getElementById("studentTable");
+
+        const row = document.createElement("tr");
+
+        const td1 = document.createElement("td");
+        td1.textContent = name;
+
+        const td2 = document.createElement("td");
+        td2.textContent = roll;
+
+        const td3 = document.createElement("td");
+        td3.textContent = dept;
+
+        const td4 = document.createElement("td");
+        const btn = document.createElement("button");
+        btn.textContent = "Delete";
+        btn.onclick = function () {
+          row.remove();
+        };
+        td4.appendChild(btn);
+
+        row.append(td1, td2, td3, td4);
+
+        table.appendChild(row);
+
+        document.getElementById("name").value = "";
+        document.getElementById("roll").value = "";
+        document.getElementById("dept").value = "";
+      }
+    </script>
+  </head>
+
+  <body>
+    <h3>Student Management</h3>
+
+    <input type="text" id="name" placeholder="Name" />
+    <input type="number" id="roll" placeholder="Roll" />
+    <input type="text" id="dept" placeholder="Department" />
+
+    <button onclick="addStudent()">Add Student</button>
+
+    <br /><br />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Roll</th>
+          <th>Department</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody id="studentTable">
+        <!-- script ekkhane row add korbe-->
+      </tbody>
+    </table>
+  </body>
+</html>

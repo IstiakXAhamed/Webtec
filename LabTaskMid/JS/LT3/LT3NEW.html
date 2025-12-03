@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Theme Toggle</title>
+
+    <style>
+      body {
+        font-family: Arial;
+      }
+
+      header,
+      footer,
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .light {
+        background-color: white;
+        color: black;
+      }
+
+      .dark {
+        background-color: #1e1e1e;
+        color: white;
+      }
+
+      #toggleBtn {
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 20px auto;
+        display: block;
+      }
+    </style>
+
+    <script defer>
+      let mode = "light";
+      // first e jokhon amra direct classname change korsi tokhon content class er properpty remove hoiye
+      // jai tai reload e je spacing ashe sheta change hoiye  jachilo ekhn johon add korchi class ager property gulo replace hoche na !
+      const toggle = () => {
+        const body = document.getElementById("body");
+        const header = document.getElementById("header");
+        const content = document.getElementById("content");
+        const footer = document.getElementById("footer");
+        const btn = document.getElementById("toggleBtn");
+
+        if (mode === "light") {
+          body.classList.add("dark");
+          header.classList.add("dark");
+          content.classList.add("dark");
+          footer.classList.add("dark");
+
+          body.classList.remove("light");
+          header.classList.remove("light");
+          content.classList.remove("light");
+          footer.classList.remove("light");
+
+          btn.textContent = "Switch to Light Mode";
+          mode = "dark";
+        } else {
+          body.classList.add("light");
+          header.classList.add("light");
+          content.classList.add("light");
+          footer.classList.add("light");
+
+          body.classList.remove("dark");
+          header.classList.remove("dark");
+          content.classList.remove("dark");
+          footer.classList.remove("dark");
+
+          btn.textContent = "Switch to Dark Mode";
+          mode = "light";
+        }
+      };
+    </script>
+  </head>
+
+  <body class="light" id="body">
+    <header class="light" id="header">My Portfolio Header</header>
+    <div class="content light" id="content">This is the content section.</div>
+    <footer class="light" id="footer">Footer Section</footer>
+
+    <button id="toggleBtn" onclick="toggle()">Switch to Dark Mode</button>
+  </body>
+</html>

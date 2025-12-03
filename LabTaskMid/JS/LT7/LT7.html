@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Style Manipulation</title>
+
+    <style>
+      #text {
+        padding: 10px;
+        font-size: 16px;
+        background-color: white;
+        text-align: left;
+      }
+    </style>
+
+    <script defer>
+      let size = 16;
+
+      function changeBg() {
+        document.getElementById("text").style.backgroundColor = "lightblue";
+      }
+
+      function increaseFont() {
+        size = size + 2;
+        document.getElementById("text").style.fontSize = size + "px";
+      }
+
+      function centerText() {
+        document.getElementById("text").style.textAlign = "center";
+      }
+
+      function resetStyle() {
+        size = 16;
+        const p = document.getElementById("text");
+        p.style.backgroundColor = "white";
+        p.style.fontSize = "16px";
+        p.style.textAlign = "left";
+      }
+    </script>
+  </head>
+
+  <body>
+    <p id="text">This is a sample paragraph for style manipulation.</p>
+
+    <button onclick="changeBg()">Change Background Color</button>
+    <button onclick="increaseFont()">Increase Font Size</button>
+    <button onclick="centerText()">Center Text</button>
+    <button onclick="resetStyle()">Reset Style</button>
+  </body>
+</html>

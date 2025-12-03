@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<script src="script.js" defer></script>-->
+    <script src="scriptSimple.js" defer></script>
+  </head>
+
+  <body>
+    <!--<form onsubmit="return formValidate()">-->
+    <form id="refForm" >
+      <label for="nameTF">Name: </label>
+      <input type="text" id="nameTF" class="inputs" />
+      <span class="error" id="nameERR"></span><br /><br />
+
+      <label for="ageTF">Age: </label>
+      <input type="number" id="ageTF" class="inputs" />
+      <span class="error" id="ageERR"></span><br /><br />
+
+      <label for="emailTF">Email: </label>
+      <input type="email" id="emailTF" class="inputs" />
+      <span class="error" id="emailERR"></span><br /><br />
+
+      <label for="gender">Gender: </label>
+      <input type="radio" id="maleRB" name="gender"  class="inputs"/>male
+      <input type="radio" id="femaleRB" name="gender"  class="inputs"/>female
+      <span class="error" id="genderERR"></span><br /><br />
+
+      <label for="sport">Sports: </label>
+      <input
+        type="checkbox"
+        id="cricketCMB"
+        name="sports"
+        class="inputs"
+      />cricket
+      <input
+        type="checkbox"
+        id="footballCMB"
+        name="sports"
+        class="inputs"
+      />football <span class="error" id="sportsERR"></span><br /><br />
+
+      <label for="country">Country : </label>
+
+      <select id="country" class="inputs">
+        <option value="">select an option</option>
+        <option value="USA">USA</option>
+        <option value="BNG">BNG</option>
+      </select>
+      <span class="error" id="countryERR"></span><br /><br />
+
+      <label for="fileUpload">Select File : </label>
+      <input type="file" id="fileUpload" class="inputs" />
+      <span class="error" id="fileERR"></span><br /><br />
+
+      <input type="submit" id="submit" value="submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real-Time Clock</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        background: #fff;
+      }
+
+      #clock {
+        font-size: 36px;
+        padding: 12px 20px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        text-align: center;
+      }
+    </style>
+
+    <script defer>
+      function preAdd(n) {
+        return String(n).padStart(2, "0");
+      }
+
+      function updateClock() {
+        const clockEl = document.getElementById("clock");
+        if (!clockEl) return;
+
+        const date = new Date();
+        let hour = date.getHours();
+        const minute = date.getMinutes();
+        const second = date.getSeconds();
+
+        const ampm = hour >= 12 ? "PM" : "AM";
+        hour = hour % 12;
+        if (hour === 0) hour = 12;
+
+        const time =
+          preAdd(hour) +
+          ":" +
+          preAdd(minute) +
+          ":" +
+          preAdd(second) +
+          " " +
+          ampm;
+        clockEl.textContent = time;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+  </head>
+  <body>
+    <div id="clock">--:--:-- --</div>
+  </body>
+</html>

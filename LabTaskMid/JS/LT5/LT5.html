@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Analyzer</title>
+
+    <style>
+      #result {
+        border: 1px solid black;
+        padding: 10px;
+        margin-top: 10px;
+        width: 300px;
+      }
+    </style>
+
+    <script defer>
+      function analyze() {
+        const text = document.getElementById("txt").value.trim();
+
+        if (text === "") {
+          document.getElementById("result").innerHTML =
+            "Please enter some text.";
+          return;
+        }
+
+        const charCount = text.length;
+
+        // split by spaces but remove empty parts
+        let words = text.split(" ").filter((w) => w !== "");
+
+        //this is matching punctuation for not counting in words !
+        words.forEach((w, i) => {
+          if (!/^[a-zA-Z]+$/.test(w)) {
+            words[i] = w.replace(/[^a-zA-Z]/g, "");
+          }
+        });
+
+        words = words.filter((w) => w !== "");
+        const wordCount = words.length;
+        const reversed = text.split("").reverse().join("");
+
+        document.getElementById("result").innerHTML =
+          "Characters: " +
+          charCount +
+          "<br>" +
+          "Words: " +
+          wordCount +
+          "<br>" +
+          "Reversed Text: " +
+          reversed;
+      }
+    </script>
+  </head>
+
+  <body>
+    <textarea id="txt" rows="6" cols="40"></textarea>
+    <br /><br />
+
+    <button onclick="analyze()">Analyze Text</button>
+
+    <div id="result"></div>
+  </body>
+</html>

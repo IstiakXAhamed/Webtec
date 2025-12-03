@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Theme Toggle</title>
+
+    <style>
+      body {
+        font-family: Arial;
+      }
+
+      header,
+      footer,
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .light {
+        background-color: white;
+        color: black;
+      }
+
+      .dark {
+        background-color: #1e1e1e;
+        color: white;
+      }
+
+      #toggleBtn {
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 20px auto;
+        display: block;
+      }
+      #content {
+        justify-content: center;
+
+        text-align: center;
+      }
+    </style>
+
+    <script defer>
+      let mode = "light";
+
+      const toggle = () => {
+        const body = document.getElementById("body");
+        const header = document.getElementById("header");
+        const content = document.getElementById("content");
+        const footer = document.getElementById("footer");
+        const btn = document.getElementById("toggleBtn");
+
+        if (mode === "light") {
+          body.className = "dark";
+          header.className = "dark";
+          content.className = "dark";
+          footer.className = "dark";
+
+          btn.textContent = "Switch to Light Mode";
+          mode = "dark";
+        } else {
+          body.className = "light";
+          header.className = "light";
+          content.className = "light";
+          footer.className = "light";
+
+          btn.textContent = "Switch to Dark Mode";
+          mode = "light";
+        }
+      };
+    </script>
+  </head>
+
+  <body class="light" id="body">
+    <header id="header">My Portfolio Header</header>
+    <div class="content" id="content">This is the content section.</div>
+    <footer id="footer">Footer Section</footer>
+
+    <button id="toggleBtn" onclick="toggle()">Switch to Dark Mode</button>
+  </body>
+</html>

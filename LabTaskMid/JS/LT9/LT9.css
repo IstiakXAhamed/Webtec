@@ -1,0 +1,218 @@
+/* -------------------- BASIC LAYOUT -------------------- */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111111;
+}
+
+.hidden { display: none; }
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+/* -------------------- HEADER -------------------- */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #999;
+}
+
+.subtitle { color: #666; }
+
+/* -------------------- NAV BUTTONS -------------------- */
+
+.main-nav { display: flex; gap: 10px; }
+
+.nav-btn {
+  padding: 6px 12px;
+  border: 1px solid #666;
+  background: transparent;
+  cursor: pointer;
+  color: #111;
+}
+
+/* -------------------- CLOCK & GREETING -------------------- */
+
+.greet-clock { text-align: right; }
+
+#clock {
+  font-family: monospace;
+  padding: 6px 8px;
+  border: 1px solid #666;
+  background: #f1f1f1;
+  margin-top: 4px;
+}
+
+/* -------------------- THEME BUTTON -------------------- */
+
+.theme-btn {
+  padding: 8px 12px;
+  border: 1px solid #666;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* -------------------- CARDS & PANELS -------------------- */
+
+.panel { margin-bottom: 20px; }
+
+.card {
+  background: #f5f5f5;
+  border: 1px solid #999;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+/* -------------------- PROJECTS -------------------- */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.project .meta {
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.link { color: #0066cc; }
+
+/* -------------------- TABLE -------------------- */
+
+.edu {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.edu th, .edu td {
+  border: 1px solid #999;
+  padding: 6px;
+  text-align: left;
+}
+
+/* -------------------- CONTACT FORM -------------------- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form input,
+.form textarea {
+  padding: 8px;
+  border: 1px solid #666;
+  background: #ffffff;
+  color: #111;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.error { color: #c0392b; }
+
+/* -------------------- FOOTER -------------------- */
+
+.site-footer {
+  text-align: center;
+  padding: 16px 0;
+  border-top: 1px solid #999;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* ======================================================== */
+/* ======================= DARK MODE ====================== */
+/* ======================================================== */
+
+body.dark {
+  background: #0f1113;
+  color: #e9eef5;
+}
+
+/* header */
+body.dark .site-header {
+  border-bottom: 1px solid #222;
+}
+
+body.dark .subtitle {
+  color: #9aa;
+}
+
+/* nav buttons fully visible */
+body.dark .nav-btn {
+  border: 1px solid #444;
+  color: #e9eef5;
+  background: #1a1c1f;
+}
+
+/* clock */
+body.dark #clock {
+  border: 1px solid #333;
+  background: #15181a;
+  color: #e9eef5;
+}
+
+/* theme button */
+body.dark .theme-btn {
+  border: 1px solid #333;
+  background: #1a1c1f;
+  color: #e9eef5;
+}
+
+/* cards */
+body.dark .card {
+  background: #15181a;
+  border: 1px solid #262626;
+  color: #e9eef5;
+}
+
+/* projects meta text */
+body.dark .project .meta {
+  color: #9aa;
+}
+
+/* links */
+body.dark a {
+  color: #4da6ff;
+}
+
+/* table */
+body.dark .edu th,
+body.dark .edu td {
+  border: 1px solid #333;
+  background: #15181a;
+  color: #e9eef5;
+}
+
+/* inputs */
+body.dark input,
+body.dark textarea {
+  background: #0f1113;
+  border: 1px solid #333;
+  color: #e9eef5;
+}
+
+/* errors */
+body.dark .error {
+  color: #ff6b6b;
+}
+
+/* footer */
+body.dark .site-footer {
+  border-top: 1px solid #222;
+  color: #9aa;
+}
