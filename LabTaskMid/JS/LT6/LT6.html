@@ -24,23 +24,29 @@
     </style>
 
     <script defer>
+      // ekta digit hole agey 0 add kore 2 digit banay (e.g., 5 -> 05)
       function preAdd(n) {
         return String(n).padStart(2, "0");
       }
 
+      // clock update korar function
       function updateClock() {
         const clockEl = document.getElementById("clock");
         if (!clockEl) return;
 
-        const date = new Date();
+        const date = new Date(); 
         let hour = date.getHours();
-        const minute = date.getMinutes();
-        const second = date.getSeconds();
+        const minute = date.getMinutes(); 
+        const second = date.getSeconds(); 
 
+       
         const ampm = hour >= 12 ? "PM" : "AM";
+        
+        // 12-ghontar format e convert 
         hour = hour % 12;
-        if (hour === 0) hour = 12;
+        if (hour === 0) hour = 12; // 0 thakle 12 
 
+        // full time string 
         const time =
           preAdd(hour) +
           ":" +
@@ -49,10 +55,14 @@
           preAdd(second) +
           " " +
           ampm;
+        
+        // clock e time 
         clockEl.textContent = time;
       }
 
+      // page load holey ekbar clock update 
       updateClock();
+      
       setInterval(updateClock, 1000);
     </script>
   </head>

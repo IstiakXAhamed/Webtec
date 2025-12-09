@@ -1,5 +1,6 @@
-function pad(n) {
-  return n < 10 ? "0" + n : String(n);
+// ekta digit hole agey 0 add kore 2 digit banay (e.g., 5 -> 05)
+function preAdd(n) {
+  return String(n).padStart(2, "0");
 }
 
 function updateClock() {
@@ -9,8 +10,9 @@ function updateClock() {
     second = date.getSeconds();
   const clock = document.getElementById("clock");
   if (clock)
-    clock.textContent = pad(hour) + ":" + pad(minutes) + ":" + pad(second);
+    clock.textContent = preAdd(hour) + ":" + preAdd(minutes) + ":" + preAdd(second);
 
+  // hour onujayi greet message set kora
   const greet = document.getElementById("greet");
   if (greet) {
     if (hour < 12) greet.textContent = "Good Morning";
@@ -22,6 +24,7 @@ function updateClock() {
 
 function setTheme(name) {
   const btn = document.getElementById("themeBtn");
+  // dark class add/remove kore theme change
   if (name === "dark") document.body.classList.add("dark");
   else document.body.classList.remove("dark");
   if (btn)
@@ -35,6 +38,7 @@ function toggleTheme() {
 }
 
 function show(id) {
+  // sob section hide kore shudhu selected ta show kora
   ["about", "projects", "contact"].forEach(function (x) {
     const el = document.getElementById(x);
     if (!el) return;
@@ -43,6 +47,7 @@ function show(id) {
   });
 }
 
+// HTML special characters escape kora (security jonno)
 function escapeHtml(second) {
   return String(second)
     .replaceAll("&", "&amp;")
@@ -56,6 +61,7 @@ function validateForm(e) {
   const email = (document.getElementById("c-email") || {}).value?.trim() || "";
   const msg = (document.getElementById("c-msg") || {}).value?.trim() || "";
 
+  // age er error clear kora
   const errName = document.getElementById("err-name");
   const errEmail = document.getElementById("err-email");
   const errMsg = document.getElementById("err-msg");
@@ -63,6 +69,7 @@ function validateForm(e) {
   if (errEmail) errEmail.textContent = "";
   if (errMsg) errMsg.textContent = "";
 
+  // validation check ar error dekhano
   let bad = false;
   if (name === "") {
     if (errName) errName.textContent = "Name required";
@@ -79,6 +86,7 @@ function validateForm(e) {
 
   if (bad) return false;
 
+  // contact form hide kore success message show kora
   const contact = document.getElementById("contact");
   if (contact) contact.classList.add("hidden");
 
@@ -98,11 +106,13 @@ function validateForm(e) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  // clock start kora ar prottek second update
   updateClock();
   setInterval(updateClock, 1000);
 
   show("about");
 
+  // navigation button e click event add
   document.querySelectorAll(".nav-btn").forEach(function (b) {
     b.addEventListener("click", function () {
       const date = b.getAttribute("data-target");
@@ -118,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contact-form");
   if (form) form.addEventListener("submit", validateForm);
 
+  // clear button e click korle sob error clear hobe
   const clear = document.getElementById("clearBtn");
   if (clear)
     clear.addEventListener("click", function () {
